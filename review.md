@@ -29,7 +29,7 @@ This file tracks the current review findings so we can work them down one by one
   - `websocket_is_connected()` returns the bound method object instead of a boolean.
   - This can suppress reconnect attempts and mislead callers about actual websocket state.
 - Status:
-  - Not started.
+  - Addressed in a follow-up PR by calling `is_connected()` correctly and adding regression tests for stale websocket clients.
 
 ### 3. Rate limiter is not concurrency-safe and adds unnecessary latency
 
